@@ -1,4 +1,5 @@
 # Token Contract in AssemblyScript
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nearprotocol/token-contract-as)
 
 ## Description
 
@@ -8,12 +9,17 @@ This is a back-end contract only so there is no front-end included.
 
 
 ## To Run
+```
+yarn start
+```
 
-*In NEAR Studio (https://studio.nearprotocol.com)*
+## To Test
 
-1. Click the "Run" button on the top of the Studio window
-
-2. You will be redirected to the output for the JavaScript tests described in `src/main.js` to show that the contract is performing properly.  This is a fully back-end contract so there is no front end.
+```
+yarn asp // as-pect tests
+yarn jest // integration tests
+yarn test // both
+```
 
 
 ## To Explore

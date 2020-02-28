@@ -6,12 +6,13 @@
     "build": "node asconfig.js",
     "deploy:contract": "near deploy",
     "deploy:pages": "gh-pages -d src",
-    "deploy": "npm run build && npm run deploy:contract && npm run deploy:pages",
-    "prestart": "npm run build && npm run deploy:contract",
+    "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
+    "prestart": "yarn build && yarn deploy:contract",
     "start": "serve src",
     "asp:ci": "asp",
     "asp": "asp --verbose",
-    "test": "npm run build && yarn asp:ci && jest test --env=near-shell/test_environment"
+    "test": "yarn asp:ci && yarn jest",
+    "jest": "yarn build && jest test --env=near-shell/test_environment"
   },
   "devDependencies": {
     "assemblyscript": "^0.9.2",
