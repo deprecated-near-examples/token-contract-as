@@ -1,0 +1,25 @@
+{
+  "name": "token-contract-as",
+  "description": "# Token Smart Contract\n\nThis project contains implementation of token contract similar to ERC20. The contract allows you to launch a new token on top of the NEAR blockchain which users can interact with as if it were any other token -- checking balances, transferring, etc.\n\n[AssemblyScript](https://github.com/AssemblyScript/assemblyscript) compiles strictly typed TypeScript to WebAssembly using Binaryen. See the [AssemblyScript wiki](https://github.com/AssemblyScript/assemblyscript/wiki) for further instructions and documentation.",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "node asconfig.js",
+    "deploy:contract": "near deploy",
+    "deploy:pages": "gh-pages -d src",
+    "deploy": "npm run build && npm run deploy:contract && npm run deploy:pages",
+    "prestart": "npm run build && npm run deploy:contract",
+    "start": "serve src",
+    "asp:ci": "asp",
+    "asp": "asp --verbose",
+    "test": "npm run build && yarn asp:ci && jest test --env=near-shell/test_environment"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.9.2",
+    "gh-pages": "^2.1.1",
+    "jest": "^24.8.0",
+    "jest-environment-node": "^24.8.0",
+    "near-as-sdk": "^0.1.0",
+    "near-shell": "^0.20.1",
+    "serve": "^11.1.0"
+  }
+}
