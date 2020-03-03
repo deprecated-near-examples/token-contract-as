@@ -19,7 +19,6 @@ Make sure you have `near-shell` by running:
 
 ```
 near --version
-
 ```
 
 If you need to install `near-shell`:
@@ -42,7 +41,6 @@ Modify the top of `src/config.js`, changing the `CONTRACT_NAME` to be the NEAR a
 …
 const CONTRACT_NAME = 'YOUR_ACCOUNT_NAME_HERE'; /* TODO: fill this in! */
 …
-
 ```
 
 Start the example!
@@ -58,7 +56,6 @@ yarn asp // as-pect tests
 yarn jest // integration tests
 yarn test // both
 ```
-
 
 ## To Explore
 
