@@ -8,7 +8,45 @@ This project contains implementation of token contract similar to [ERC20](https:
 This is a back-end contract only so there is no front-end included.
 
 
-## To Run
+## Getting started
+Install dependencies:
+
+```
+yarn
+```
+
+Make sure you have `near-shell` by running:
+
+```
+near --version
+
+```
+
+If you need to install `near-shell`:
+
+```
+npm install near-shell -g
+```
+
+If you do not have a NEAR account, please create one with [NEAR Wallet](https://wallet.nearprotocol.com).
+
+In the project root, login with `near-shell` by following the instructions after this command:
+
+```
+near login
+```
+
+Modify the top of `src/config.js`, changing the `CONTRACT_NAME` to be the NEAR account that was just used to log in.
+
+```javascript
+…
+const CONTRACT_NAME = 'YOUR_ACCOUNT_NAME_HERE'; /* TODO: fill this in! */
+…
+
+```
+
+Start the example!
+
 ```
 yarn start
 ```
