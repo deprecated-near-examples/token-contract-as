@@ -19,7 +19,7 @@
     "gh-pages": "^2.1.1",
     "jest": "^24.8.0",
     "jest-environment-node": "^24.8.0",
-    "near-as-sdk": "^0.1.0",
+    "near-sdk-as": "^0.0.2",
     "near-shell": "^0.20.1",
     "serve": "^11.1.0"
   }
