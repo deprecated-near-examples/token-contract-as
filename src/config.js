@@ -1,5 +1,5 @@
 (function() {
-  const CONTRACT_NAME = 'near-hello-devnet'; /* TODO: fill this in! */
+  const CONTRACT_NAME = 'gitpod'; /* TODO: fill this in! */
   const DEFAULT_ENV = 'development';
 
   function getConfig(env) {
@@ -12,6 +12,7 @@
         nodeUrl: 'https://rpc.nearprotocol.com',
         contractName: CONTRACT_NAME,
         walletUrl: 'https://wallet.nearprotocol.com',
+        helperUrl: 'https://near-contract-helper.onrender.com'
       };
     case 'staging':
       return {
@@ -30,8 +31,8 @@
       };
     case 'test':
       return {
-        networkId: 'local',
-        nodeUrl: 'http://localhost:3030',
+        networkId: 'shared-test',
+        nodeUrl: 'http://shared-test.nearprotocol.com:3030',
         contractName: CONTRACT_NAME,
         masterAccount: 'test.near',
       };
