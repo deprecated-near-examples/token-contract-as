@@ -9,18 +9,15 @@
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
     "prestart": "yarn build && yarn deploy:contract",
     "start": "serve src",
-    "asp:ci": "asp",
     "asp": "asp --verbose",
-    "test": "yarn asp:ci && yarn jest",
-    "jest": "yarn build && jest test --env=near-shell/test_environment --runInBand"
+    "test": "yarn asp"
   },
   "devDependencies": {
     "assemblyscript": "^0.9.2",
     "gh-pages": "^2.1.1",
-    "jest": "^24.8.0",
-    "jest-environment-node": "^24.8.0",
     "near-as-sdk": "^0.1.0",
     "near-shell": "^0.20.1",
-    "serve": "^11.1.0"
+    "serve": "^11.1.0",
+    "typescript": "^3.8.3"
   }
 }
