@@ -24,7 +24,6 @@ github:
 tasks:
   - before: nvm use default
     init: yarn && alias near=./node_modules/near-shell/bin/near
-    command: near --help
 
 ports:
   - port: 3030
