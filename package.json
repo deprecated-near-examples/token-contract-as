@@ -10,11 +10,13 @@
     "prestart": "yarn build && yarn deploy:contract",
     "start": "parcel src/index.html",
     "asp": "asp --verbose",
-    "test": "yarn asp"
+    "test": "yarn asp && yarn jest",
+    "jest": "yarn build && jest test --env=near-shell/test_environment"
   },
   "devDependencies": {
     "assemblyscript": "^0.9.2",
     "gh-pages": "^2.1.1",
+    "jest": "^24.8.0",
     "near-sdk-as": "^0.0.2",
     "near-shell": "^0.20.1",
     "parcel-bundler": "^1.12.4"
@@ -22,5 +24,8 @@
   "dependencies": {
     "nearlib": "^0.21.0",
     "regenerator-runtime": "^0.13.3"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["<rootDir>/assembly/", "<rootDir>/node_modules/"]
   }
 }
