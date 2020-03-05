@@ -1,3 +1,9 @@
+import "regenerator-runtime/runtime";
+
+import * as nearlib from "nearlib"
+import getConfig from "./config"
+
+let nearConfig = getConfig(process.env.NODE_ENV || "development");
 // Connects to NEAR and provides `near`, `walletAccount` and `contract` objects in `window` scope
 async function connect() {
   // Initializing connection to the NEAR node.
