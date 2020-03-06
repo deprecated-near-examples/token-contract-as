@@ -28,6 +28,9 @@
     "regenerator-runtime": "^0.13.3"
   },
   "jest": {
-    "testPathIgnorePatterns": ["<rootDir>/assembly/", "<rootDir>/node_modules/"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/assembly/",
+      "<rootDir>/node_modules/"
+    ]
   }
 }
