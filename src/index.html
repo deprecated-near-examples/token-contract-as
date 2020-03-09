@@ -18,26 +18,23 @@
   
       <p>To init:</p>
       <pre>
-        contract.init({initialOwner: walletAccount.getAccountId()})
+await contract.init({initialOwner: walletAccount.getAccountId()})
       </pre>
       
       <p>To check your balance:</p>
       <pre>
-        contract.balanceOf({tokenOwner: walletAccount.getAccountId()})
+await contract.balanceOf({tokenOwner: walletAccount.getAccountId()})
       </pre>
       
       <p>To send money:</p>
       <pre>
-        contract.transfer({to: 'bob.near', tokens: '1000'})
+await contract.transfer({to: 'bob.near', tokens: '1000'})
       </pre>
     </div>
     <div class="after-sign-in sign-out" style="display: none;">
       <button class="btn btn-primary">Sign Out</button>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/nearlib@0.20.0/dist/nearlib.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-  <script src="./config.js"></script>
   <script src="./main.js"></script>
 </body>
 </html>

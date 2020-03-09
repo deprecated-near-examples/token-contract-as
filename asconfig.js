@@ -1,7 +1,7 @@
 const compile = require("near-bindgen-as/compiler").compile
 
 compile("assembly/main.ts", // input file
-        "dist/main.wasm",    // output file
+        "out/main.wasm",    // output file
         [
         //   "-O1",          // Optional arguments
         "--debug",

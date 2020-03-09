@@ -4,23 +4,33 @@
   "version": "0.0.1",
   "scripts": {
     "build": "node asconfig.js",
-    "deploy:contract": "near deploy",
+    "dev:deploy:contract": "near dev-deploy && echo \"# This file used by parcel\nCONTRACT_NAME=$(cat neardev/dev-account)\" > .env.local",
+    "deploy:contract": "near deploy && rm -f .env.local",
     "deploy:pages": "gh-pages -d src",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
     "prestart": "yarn build && yarn deploy:contract",
-    "start": "serve src",
-    "asp:ci": "asp",
+    "start": "parcel src/index.html",
     "asp": "asp --verbose",
-    "test": "yarn asp:ci && yarn jest",
-    "jest": "yarn build && jest test --env=near-shell/test_environment"
+    "test": "yarn asp && yarn jest",
+    "jest": "yarn build && jest test --env=near-shell/test_environment",
+    "dev": "yarn build && yarn dev:deploy:contract && parcel src/index.html"
   },
   "devDependencies": {
     "assemblyscript": "^0.9.2",
     "gh-pages": "^2.1.1",
     "jest": "^24.8.0",
-    "jest-environment-node": "^24.8.0",
     "near-sdk-as": "^0.0.2",
     "near-shell": "^0.20.1",
-    "serve": "^11.1.0"
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "nearlib": "^0.21.0",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/assembly/",
+      "<rootDir>/node_modules/"
+    ]
   }
 }
