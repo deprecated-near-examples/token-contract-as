@@ -30,7 +30,7 @@ function updateUI() {
 
 // Log in user using NEAR Wallet on "Sign In" button click
 document.querySelector('.sign-in .btn').addEventListener('click', () => {
-  walletAccount.requestSignIn(nearConfig.contractName, 'NEAR Studio Counter');
+  walletAccount.requestSignIn(nearConfig.contractName, 'NEAR token example');
 });
 
 document.querySelector('.sign-out .btn').addEventListener('click', () => {
