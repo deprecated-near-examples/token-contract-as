@@ -1,9 +1,15 @@
-# Token Contract in AssemblyScript
+Token Contract in AssemblyScript
+================================
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/near-examples/token-contract-as)
+
+<!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
+
+This is a stripped-down example where we'll demonstrate creating a token. We'll visit a page, sign in and use your browser's console to run a commands to initialize, send, and get the balance of a custom token.
 
 ## Description
 
-This project contains implementation of token contract similar to [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard). The contract allows you to launch a new token on top of the NEAR blockchain which users can interact with as if it were any other token -- checking balances, transferring, etc.
+This project contains implementation of token contract similar to [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
 
 ## Getting started
 
