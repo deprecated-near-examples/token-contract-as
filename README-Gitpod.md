@@ -26,10 +26,6 @@ Once you've opened the tab in your browser, follow the directions displayed on t
 
 In many modern browsers you may find this by right clicking anywhere on the page, right-click, **Inspect**, and then navigate to the **Console** tab.
 
-```
-yarn start
-```
-
 ## To Test
 
 ```
