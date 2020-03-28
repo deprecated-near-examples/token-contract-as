@@ -16,7 +16,7 @@
     "dev": "yarn build && yarn dev:deploy:contract && parcel src/index.html"
   },
   "devDependencies": {
-    "assemblyscript": "^0.9.2",
+    "assemblyscript": "^0.9.4",
     "gh-pages": "^2.1.1",
     "jest": "^25.2.3",
     "near-sdk-as": "^0.1.2",
