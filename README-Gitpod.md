@@ -1,16 +1,15 @@
 Token Contract in AssemblyScript - Gitpod version
 =================================================
 
-This is a stripped-down example where we'll demonstrate creating a token. We'll visit a page, sign in and use your browser's console to run commands to initialize, send, and get the balance of a custom token.
+This project contains an implementation of a token contract similar to [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard) but simpler. We'll visit a page, sign in and use your browser's console to run commands to initialize, send, and get the balance of a custom token.
 
-This README is specific to Gitpod and this example. For local development, please see [README.md](README.md).
+This README is specific to Gitpod. For local development, please see [README.md](README.md).
 
-This project contains implementation of token contract similar to [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
 
 Getting started
----------------
+===============
 
-Gitpod has taken care of installing all the necessary tools and dependencies. At the bottom of Gitpod is a terminal which will display a link to follow:
+Gitpod has taken care of installing all the necessary tools and dependencies. If you're viewing this file in Gitpod, at the bottom of the page you'll see a terminal which will display a link to follow:
 
 
     Server running at http://localhost:1234
@@ -18,7 +17,7 @@ Gitpod has taken care of installing all the necessary tools and dependencies. At
 
 A small dialog appears showing options similar to this:
 
-![Gitpod dialog that appears when website is served](assets/gitpod-port-1234.jpg)
+![A Gitpod dialog box saying 'A service is available on port 1234' and giving options to 'Open Preview' or 'Open Browser'](assets/gitpod-port-1234.jpg)
 
 The "Open Preview" option will open the site in a tab within the IDE. Note that Gitpod may need a little time to spin up the website. It's possible this step might require reloading after a brief pause.
 
@@ -28,14 +27,25 @@ Once you've opened the web app in your browser, follow the directions displayed 
 
 In many modern browsers you may find this by right-clicking anywhere on the page, selecting Inspect, and navigating to the **Console** tab.
 
-To Test
--------
 
-    yarn asp // as-pect tests
-    yarn jest // integration tests
-    yarn test // both
+Exploring The Code
+==================
 
-To Explore
-----------
+1. The backend code lives in the `/assembly` folder. This code gets deployed to
+   the NEAR blockchain when you run `yarn deploy:contract`. This sort of
+   code-that-runs-on-a-blockchain is called a "smart contract" – [learn more
+   about NEAR smart contracts][smart contract docs].
+2. The frontend code lives in the `/src` folder.
+   [/src/index.html](/src/index.html) is a great place to start exploring. Note
+   that it loads in `/src/main.js`, where you can learn how the frontend
+   connects to the NEAR blockchain.
+3. Tests: there are different kinds of tests for the frontend and backend. The
+   backend code gets tested with the [asp] command for running the backend
+   AssemblyScript tests, and [jest] for running frontend tests. You can run
+   both of these at once with `yarn test`.
 
-See `assembly/main.ts` for the contract code and `src/main.js` for the JavaScript tests which define its usage.
+Both contract and client-side code will auto-reload as you change source files.
+
+  [smart contract docs]: https://docs.nearprotocol.com/docs/roles/developer/contracts/assemblyscript
+  [asp]: https://www.npmjs.com/package/@as-pect/cli
+  [jest]: https://jestjs.io/
