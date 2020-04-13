@@ -17,15 +17,15 @@
   },
   "devDependencies": {
     "assemblyscript": "^0.9.4",
+    "env-cmd": "^10.1.0",
     "gh-pages": "^2.1.1",
+    "jest": "^25.3.0",
     "near-sdk-as": "^0.1.5",
     "near-shell": "^0.20.6",
-    "parcel-bundler": "^1.12.4",
-    "env-cmd": "^10.1.0",
-    "jest": "^25.3.0"
+    "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "nearlib": "^0.22.0",
+    "near-api-js": "^0.23.0",
     "regenerator-runtime": "^0.13.5"
   },
   "jest": {
