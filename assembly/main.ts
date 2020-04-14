@@ -1,5 +1,5 @@
 // @nearfile
-import { context, storage, logging, PersistentMap } from "near-runtime-ts";
+import { context, storage, logging, PersistentMap } from "near-sdk-as";
 
 // --- contract code goes below
 

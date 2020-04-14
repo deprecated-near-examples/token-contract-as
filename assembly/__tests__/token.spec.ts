@@ -1,4 +1,4 @@
-import { Context } from "wasm-mock-vm";
+import { Context, u128 } from "near-sdk-as";
 import { init, totalSupply, balanceOf, transfer, approve, transferFrom } from "../main";
 
 let alice = 'alice';
@@ -7,14 +7,16 @@ let eve = 'eve.near';
 
 describe('Token', function() {
   beforeAll(() => {
-    Context.setSigner_account_id(alice);
+    
   });
 
   describe('with alice as initial owner', () => {
-    beforeAll(() => {
+    beforeEach(() => {
+      Context.setSigner_account_id(alice);
+      Context.setAccount_balance(u128.fromString("1000000"));
       init(alice);
     });
-
+    
     it("intially has " + totalSupply() + " tokens", () => {
       expect(balanceOf(alice).toString()).toBe('1000000');
     });
@@ -32,6 +34,7 @@ describe('Token', function() {
     });
 
     it('can transfer from approved account to another account', () => {
+      transfer(bob, 100);
       const aliceStartBalance = balanceOf(alice);
       const bobStartBalance = balanceOf(bob);
       const eveStartBalance = balanceOf(eve);
