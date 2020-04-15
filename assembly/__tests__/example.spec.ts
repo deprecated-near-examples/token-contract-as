@@ -1,5 +1,5 @@
-import { init, balanceOf, totalSupply, transfer, transferFrom } from "../main";
-import { VM } from "wasm-mock-vm";
+import { init, balanceOf, totalSupply, transferFrom } from "../main";
+import { VM } from "near-sdk-as";
 
 const alice: string = "alice";
 const bob: string = "bob";
