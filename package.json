@@ -7,7 +7,6 @@
     "build": "node asconfig.js",
     "dev:deploy:contract": "near dev-deploy",
     "deploy:contract": "near deploy",
-    "deploy:pages": "gh-pages -d src",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
     "prestart": "yarn build && yarn deploy:contract",
     "start": "parcel src/index.html",
@@ -19,7 +18,6 @@
   "devDependencies": {
     "assemblyscript": "^0.9.4",
     "env-cmd": "^10.1.0",
-    "gh-pages": "^2.1.1",
     "jest": "^25.5.3",
     "near-sdk-as": "^0.2.1",
     "near-shell": "^0.21.0",
