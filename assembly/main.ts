@@ -39,6 +39,7 @@ export function transfer(to: string, tokens: u64): boolean {
   logging.log("transfer from: " + context.sender + " to: " + to + " tokens: " + tokens.toString());
   const fromAmount = getBalance(context.sender);
   assert(fromAmount >= tokens, "not enough tokens on account");
+  assert(getBalance(to) <= getBalance(to) + tokens,"overflow at the receiver side");
   balances.set(context.sender, fromAmount - tokens);
   balances.set(to, getBalance(to) + tokens);
   return true;
@@ -55,6 +56,7 @@ export function transferFrom(from: string, to: string, tokens: u64): boolean {
   assert(fromAmount >= tokens, "not enough tokens on account");
   const approvedAmount = allowance(from, to);
   assert(tokens <= approvedAmount, "not enough tokens approved to transfer");
+  assert(getBalance(to) <= getBalance(to) + tokens,"overflow at the receiver side");
   balances.set(from, fromAmount - tokens);
   balances.set(to, getBalance(to) + tokens);
   return true;
