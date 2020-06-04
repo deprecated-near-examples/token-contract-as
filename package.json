@@ -19,7 +19,7 @@
     "assemblyscript": "^0.9.4",
     "env-cmd": "^10.1.0",
     "jest": "^25.5.3",
-    "near-sdk-as": "^0.2.1",
+    "near-sdk-as": "^0.3.4",
     "near-shell": "^0.22.0",
     "parcel-bundler": "^1.12.4"
   },
