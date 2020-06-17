@@ -16,10 +16,9 @@
     "dev": "yarn build && yarn dev:deploy:contract && env-cmd -f ./neardev/dev-account.env parcel src/index.html"
   },
   "devDependencies": {
-    "assemblyscript": "^0.9.4",
     "env-cmd": "^10.1.0",
     "jest": "^26.0.1",
-    "near-sdk-as": "^0.2.1",
+    "near-sdk-as": "^0.4.2",
     "near-shell": "^0.24.2",
     "parcel-bundler": "^1.12.4"
   },
