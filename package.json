@@ -16,6 +16,7 @@
     "dev": "yarn build && yarn dev:deploy:contract && env-cmd -f ./neardev/dev-account.env parcel src/index.html"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "env-cmd": "^10.1.0",
     "jest": "^26.1.0",
     "near-sdk-as": "^0.4.2",
