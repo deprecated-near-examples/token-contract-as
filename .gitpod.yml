@@ -24,7 +24,7 @@ github:
 tasks:
   - before: echo "nvm use default" >> ~/.bashrc
     init: yarn && alias near=./node_modules/near-shell/bin/near
-    command: source ~/.bashrc gp open README-Gitpod.md && yarn dev
+    command: source ~/.bashrc; gp open README-Gitpod.md && yarn dev
 
 ports:
   - port: 3030
