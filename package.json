@@ -20,7 +20,7 @@
     "env-cmd": "^10.1.0",
     "jest": "^26.2.2",
     "near-sdk-as": "^0.4.2",
-    "near-shell": "^0.24.9",
+    "near-cli": "^1.0.1",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
@@ -28,7 +28,7 @@
     "regenerator-runtime": "^0.13.7"
   },
   "jest": {
-    "testEnvironment": "near-shell/test_environment",
+    "testEnvironment": "near-cli/test_environment",
     "testPathIgnorePatterns": [
       "<rootDir>/assembly/",
       "<rootDir>/node_modules/"
