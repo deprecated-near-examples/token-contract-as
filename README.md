@@ -36,15 +36,15 @@ Standard deploy option
 
 In this second option, the smart contract will get deployed to a specific account created with the NEAR Wallet.
 
-1. Ensure `near-shell` is installed by running:
+1. Ensure `near-cli` is installed by running:
 
        near --version
 
-   If needed, install `near-shell`:
+   If needed, install `near-cli`:
 
-       npm install near-shell -g
+       npm install near-cli -g
 
-2. If you do not have a NEAR account, please create one with [NEAR Wallet](https://wallet.nearprotocol.com). Then, in the project root, login with `near-shell` by following the instructions after this command:
+2. If you do not have a NEAR account, please create one with [NEAR Wallet](https://wallet.nearprotocol.com). Then, in the project root, login with `near-cli` by following the instructions after this command:
 
        near login
 
