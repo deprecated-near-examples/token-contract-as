@@ -19,7 +19,7 @@
     "dotenv": "^8.2.0",
     "env-cmd": "^10.1.0",
     "jest": "^26.4.2",
-    "near-sdk-as": "^0.4.2",
+    "near-sdk-as": "^1.2.0",
     "near-cli": "^1.0.3",
     "parcel-bundler": "^1.12.4"
   },
