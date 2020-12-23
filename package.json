@@ -4,8 +4,8 @@
   "license": "(MIT AND Apache-2.0)",
   "version": "0.0.1",
   "scripts": {
-    "build": "node asconfig.js",
-    "dev:deploy:contract": "near dev-deploy",
+    "build": "asb --verbose",
+    "dev:deploy:contract": "near dev-deploy --wasmFile=\"./contract.wasm\"",
     "deploy:contract": "near deploy",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
     "prestart": "yarn build && yarn deploy:contract",

@@ -1,4 +1,4 @@
-import { init, balanceOf, totalSupply, transferFrom } from "../main";
+import { init, balanceOf, totalSupply, transferFrom } from "..";
 import { VM } from "near-sdk-as";
 
 const alice: string = "alice";

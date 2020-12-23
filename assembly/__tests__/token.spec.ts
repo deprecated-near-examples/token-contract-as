@@ -1,5 +1,5 @@
 import { Context, u128 } from "near-sdk-as";
-import { init, totalSupply, balanceOf, transfer, approve, transferFrom } from "../main";
+import { init, totalSupply, balanceOf, transfer, approve, transferFrom } from "..";
 
 let alice = 'alice';
 let bob = 'bob.near';
