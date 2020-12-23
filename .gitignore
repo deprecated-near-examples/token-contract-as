@@ -16,10 +16,10 @@ neardev/shared-test/*
 # ignore any default network private keys and dev-account
 neardev/default/*
 neardev/dev-account
-neardev/dev-account.env
+dev-account.env
 
 # ignore dev .cache
 .cache/
 
-# ignore contract build file
-contract.wasm
+# ignore contract build files
+build/release
