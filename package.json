@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "asb --verbose",
-    "dev:deploy:contract": "near dev-deploy --wasmFile=\"./build/release/contract.wasm\"",
+    "dev:deploy:contract": "near dev-deploy --wasmFile=\"./out/main.wasm\"",
     "deploy:contract": "near deploy",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
     "prestart": "yarn build && yarn deploy:contract",
