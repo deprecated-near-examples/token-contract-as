@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME || 'token-contract-as'; /* TODO: fill this in! */
+const CONTRACT_NAME = process.env.CONTRACT_NAME || 'jloc.testnet'; /* TODO: fill this in! */
 
 function getConfig (env) {
   switch (env) {
