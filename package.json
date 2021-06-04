@@ -8,6 +8,7 @@
     "dev:deploy:contract": "near dev-deploy --wasmFile=\"./build/release/contract.wasm\"",
     "deploy:contract": "near deploy",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
+    "pretest": "yarn build",
     "prestart": "yarn build && yarn deploy:contract",
     "start": "parcel src/index.html",
     "asp": "asp --verbose",
