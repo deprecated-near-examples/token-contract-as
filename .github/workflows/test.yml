@@ -11,8 +11,8 @@ jobs:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest, windows-latest]
-        nodeversion: ['12.x', '13.x', '14.x', '15.x']
-        ENV: [ci, ci-betanet]
+        nodeversion: ['12.x', '14.x', '15.x']
+        ENV: ['ci', 'ci-betanet']
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js v"${{ matrix.nodeversion }}""
@@ -26,5 +26,5 @@ jobs:
       - name: test
         env:
           YARN_GPG: no
-          NODE_ENV: "${{ ENV }}"
+          NODE_ENV: ${{ matrix.ENV }}
         run: yarn test
