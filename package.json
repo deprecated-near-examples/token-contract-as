@@ -5,9 +5,10 @@
   "version": "0.0.1",
   "scripts": {
     "build": "asb --verbose",
-    "dev:deploy:contract": "near dev-deploy --wasmFile=\"./build/release/contract.wasm\"",
+    "dev:deploy:contract": "near dev-deploy",
     "deploy:contract": "near deploy",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
+    "pretest": "yarn build",
     "prestart": "yarn build && yarn deploy:contract",
     "start": "parcel src/index.html",
     "asp": "asp --verbose",
