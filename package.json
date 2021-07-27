@@ -20,7 +20,7 @@
     "env-cmd": "^10.1.0",
     "jest": "^27.0.6",
     "near-sdk-as": "^3.2.3",
-    "near-cli": "^2.1.0",
+    "near-cli": "^2.1.1",
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
