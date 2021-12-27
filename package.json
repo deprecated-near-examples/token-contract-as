@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "asb --verbose",
+    "postbuild": "mkdir -p ./out && cp ./build/release/contract.wasm ./out/main.wasm",
     "dev:deploy:contract": "near dev-deploy --wasmFile=\"./build/release/contract.wasm\"",
     "deploy:contract": "near deploy",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
