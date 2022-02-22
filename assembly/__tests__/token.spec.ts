@@ -1,4 +1,4 @@
-import { Context, u128 } from "near-sdk-as";
+import { VMContext as Context, u128 } from "near-sdk-as";
 import { init, totalSupply, balanceOf, transfer, approve, transferFrom } from "..";
 
 let alice = 'alice';
@@ -7,7 +7,7 @@ let eve = 'eve.near';
 
 describe('Token', function() {
   beforeAll(() => {
-    
+
   });
 
   describe('with alice as initial owner', () => {
@@ -16,7 +16,7 @@ describe('Token', function() {
       Context.setAccount_balance(u128.fromString("1000000"));
       init(alice);
     });
-    
+
     it("intially has " + totalSupply() + " tokens", () => {
       expect(balanceOf(alice).toString()).toBe('1000000');
     });

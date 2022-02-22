@@ -23,3 +23,5 @@ dev-account.env
 
 # ignore contract build files
 build/release
+out
+.idea
