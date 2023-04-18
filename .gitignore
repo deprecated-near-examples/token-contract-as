@@ -22,4 +22,4 @@ dev-account.env
 .cache/
 
 # ignore contract build files
-build/release
+out
